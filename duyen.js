@@ -2,13 +2,23 @@
  * Settings
  */
 
-var settings = {
+var exampleSettings = {
   particles: {
     length: 1718, // maximum amount of particles
-    duration: 3, // particle duration in sec
+    duration: 5, // particle duration in sec
     velocity: 50, // particle velocity in pixels/sec
     effect: -1, // play with this for a nice effect
     size: 10, // particle size in pixels
+  },
+};
+
+var settings = {
+  particles: {
+    length: 1718, // maximum amount of particles
+    duration: 10, // particle duration in sec
+    velocity: 100, // particle velocity in pixels/sec
+    effect: -0.9, // play with this for a nice effect
+    size: 8, // particle size in pixels
   },
 };
 /*
