@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quang yêu Duyên say đắm &lt;3 </title>
   <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+  <link rel="stylesheet" href="./text.css">
   
   <style>
     html,
@@ -54,22 +55,37 @@
       flex-direction: column;
       width: 100%;
     }
+
   </style>
 </head>
 
 <body>
-  <div class="msg">
+  <div class="container">
+    <canvas id="loveboard"></canvas>
+  </div>
+  <!-- <div class="msg">
     <h1>Quang Love Duyen</h1>
     <h3>Forever &lt;3</h3>
+  </div> -->
+  <div id="container">
+    <span id="text1"></span>
+    <span id="text2"></span>
   </div>
-  
-  <div class="container">
-    <canvas id="pinkboard"></canvas>
-  </div>
-  <script>
 
-  </script>
+  <svg id="filters">
+    <defs>
+        <filter id="threshold">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 255 -140" />
+        </filter>
+    </defs>
+  </svg>
+  
+  
   <script src="duyen.js"></script>
+  <script src="text.js"></script>
 </body>
 
 </html>

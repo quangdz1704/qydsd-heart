@@ -4,15 +4,15 @@
 
 var settings = {
   particles: {
-    length: 1500, // maximum amount of particles
+    length: 1718, // maximum amount of particles
     duration: 3, // particle duration in sec
-    velocity: 70, // particle velocity in pixels/sec
-    effect: -0.9, // play with this for a nice effect
+    velocity: 50, // particle velocity in pixels/sec
+    effect: -1, // play with this for a nice effect
     size: 10, // particle size in pixels
   },
 };
 /*
- * RequestAnimationFrame polyfill by Erik Möller
+ * RequestAnimationFrame polyfill
  */
 
 (function () {
@@ -209,13 +209,15 @@ var ParticlePool = (function () {
     }
     context.closePath();
     // create the fill
-    context.fillStyle = '#ea80b0';
+    // context.fillStyle = '#ea80b0';
+    context.fillStyle = '#95C3FF';
     context.fill();
     // create the image
     var image = new Image();
     image.src = canvas.toDataURL();
     return image;
   })();
+
   // render that thing!
   function render() {
     // next animation frame
@@ -253,4 +255,4 @@ var ParticlePool = (function () {
     onResize();
     render();
   }, 10);
-})(document.getElementById('pinkboard'));
+})(document.getElementById('loveboard'));
